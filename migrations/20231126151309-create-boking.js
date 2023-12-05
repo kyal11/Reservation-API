@@ -13,9 +13,11 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       hotel_id: {
+        allowNull: true,
         type: Sequelize.INTEGER
       },
       flight_id: {
+        allowNull: true,
         type: Sequelize.INTEGER
       },
       order_date: {

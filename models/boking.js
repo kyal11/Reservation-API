@@ -10,7 +10,15 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      boking.belongsTo(models.User,{
+        foreignKey:"user_id"
+      })
+      boking.belongsTo(models.hotel,{
+        foreignKey:"hotel_id"
+      })
+      boking.belongsTo(models.flight_id,{
+        foreignKey:"flight_id"
+      })
     }
   }
   boking.init({
